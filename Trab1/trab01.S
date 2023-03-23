@@ -13,7 +13,14 @@
 ;pode ser compreendido entre 0 e 15, onde 15=F. Neste caso o valor é positivo
 ;por ser do tipo uint16_t, ou seja, um intiero sem sinal de 16 bits.
 
-;b) .equ NAN, FFFF ocupa 16 bits, ou seja, 1 registo.
+;b) Existem duas definições possiveis para declarar a constante NAN,
+;.equ NAN, FFFF e 
+;NAN:  
+; .word 0xFFFF 
+;como sabemos ambas apresentam vantagens e desvantagens.
+;Na primeira opção só trabalhamos com registos sendo necessário um maior número
+;de instruções, enquanto na segunda ao utilizarmos unicamente a memória o processo
+;torna-se mais rápido, no entanto ao termos de nos dirigir à memória fica menos eficiente.
 
 ;2 c)
 
